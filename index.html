@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoKenPô na Web</title>
+  <link rel="shortcut icon" href="img/pedra-papel-tesoura.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="inicia">
+    <picture>
+      <img src="img/pedra-papel-tesoura.png" alt="" width="200px">
+    </picture>
+    <h2>Seja Bem Vindo(a) ao JoKenPô na Web!</h2>
+    <a href="#" class="btn-jogar">Jogar</a>
+    <div class="clique-regras">
+      <p>Não sabe as regras?</p>
+      <a href="#" class="btn-regras">Clique aqui</a>
+    </div>
+  </section>
+  <section class="regras">
+    <h2>Regras</h2>
+    <ul>
+      <li>- Você escolhe uma das opções: Pedra, papel ou tesoura.</li>
+      <li>- A máquina irá fazer uma escolha aleatória.</li>
+      <li>- Caso ambas as escolhas sejam iguais, haverá um empate.</li>
+      <li>- Pedra ganha de Tesoura.</li>
+      <li>- Papel ganha de Pedra.</li>
+      <li>- Tesoura ganha de Papel.</li>
+    </ul>
+    <span class="close-rules">X</span>
+  </section>
+  <main>
+    <h1>JoKenPô na Web</h1>
+    <p class="resultado">Boa Sorte!</p>
+    <section class="jogadas">
+      <div class="jogada-usuario"></div>
+      <div class="jogada-maquina"></div>
+    </section>
+    <p class="mid-text">Faça sua escolha:</p>
+    <section class="escolhas">
+      <div class="escolha pedra"><img src="img/pedra.png" alt=""></div>
+      <div class="escolha papel"><img src="img/papel.png" alt=""></div>
+      <div class="escolha tesoura"><img src="img/tesoura.png" alt=""></div>
+    </section>
+    <section class="contadores">
+      <div>Vitórias: <span class="span-vitorias">0</span></div>
+      <div>Derrotas: <span class="span-derrotas">0</span></div>
+      <div>Empates: <span class="span-empates">0</span></div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

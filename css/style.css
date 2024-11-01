@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+/* Root */
+:root {
+  --branco: rgb(238, 238, 238);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Body */
+body {
+  background: linear-gradient(45deg, #000046, #1cb5e0);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--branco);
+  font-family: 'Poetsen One';
+}
+
+/* Inicia */
+.inicia {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inicia picture {
+  margin-bottom: 50px;
+}
+
+.inicia h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.btn-jogar {
+  color: var(--branco);
+  background: linear-gradient(45deg, #6719b1, #9734f3);
+  max-width: max-content;
+  align-self: center;
+  font-size: 3rem;
+  padding: 15px 50px;
+  border-radius: 5px;
+  margin-bottom: 200px;
+}
+
+.btn-jogar:hover {
+  color: #c9a1db;
+  transition: 0.3s;
+}
+
+.clique-regras {
+  font-size: 1.4rem;
+}
+
+.clique-regras p {
+  margin-bottom: 20px;
+}
+
+.clique-regras a {
+  color: var(--branco);
+  background: linear-gradient(45deg, #6719b1, #9734f3);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+  .inicia h2 {
+    font-size: 2rem;
+  }
+
+  .inicia picture img {
+    max-width: 150px;
+  }
+
+  .btn-jogar {
+    color: var(--branco);
+    background: linear-gradient(45deg, #6719b1, #9734f3);
+    max-width: max-content;
+    align-self: center;
+    font-size: 2.5rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 200px;
+  }
+}
+
+/* Regras */
+.regras {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(45deg, #6719b1, #9734f3);
+  padding: 20px 20px;
+  border-radius: 15px;
+}
+
+.regras h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-regras:hover {
+  color: #c9a1db;
+  transition: 0.3s;
+}
+
+.regras ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.close-rules {
+  position: absolute;
+  font-size: 2rem;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-rules:hover {
+  color: #c9a1db;
+  transition: 0.3s;
+}
+
+/* Main */
+
+main {
+  display: none;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 20px;
+}
+
+.jogadas {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.jogadas div {
+  padding: 20px;
+  border: 2px solid var(--branco);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.jogada-usuario {
+  background-image: url(../img/punho-inicial.png);
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+.jogada-maquina {
+  background-image: url(../img/punho-inicial.png);
+  background-position: center;
+  background-size: contain;
+  transition: 0.5s;
+}
+
+.mid-text {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.resultado {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* Escolhas */
+.escolhas {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.escolhas div {
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+}
+
+.escolha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escolha img {
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.escolha img:hover {
+  max-width: 240px;
+  transition: 0.3s;
+}
+
+.contadores {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+/* Classes */
+.ativo {
+  display: flex;
+}
+
+.desativado {
+  display: none;
+}
+
+.end-flex {
+  align-items: flex-end;
+}
+
+@media (max-width: 700px) {
+  main h1 {
+    font-size: 3rem;
+  }
+
+  .mid-text {
+    font-size: 1.6rem
+  }
+
+  .jogadas {
+    gap: 50px;
+  }
+
+  .jogadas div {
+    width: 150px;
+    height: 150px;
+  }
+
+  .escolhas div {
+    width: 150px;
+    height: 150px;
+  }
+
+  .escolha img {
+    max-width: 140px;
+    cursor: pointer;
+  }
+
+  .escolha img:hover {
+    max-width: 160px;
+    transition: 0.3s;
+  }
+
+  .contadores {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  .mid-text {
+    font-size: 1.5rem
+  }
+
+  .jogadas {
+    gap: 20px;
+  }
+
+  .jogadas div {
+    width: 120px;
+    height: 120px;
+  }
+
+  .escolhas div {
+    width: 130px;
+    height: 130px;
+  }
+
+  .escolha img {
+    max-width: 120px;
+    cursor: pointer;
+  }
+
+  .escolha img:hover {
+    max-width: 140px;
+    transition: 0.3s;
+  }
+
+  .contadores {
+    font-size: 1rem;
+  }
+
+  .resultado {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  main h1 {
+    font-size: 2rem;
+  }
+
+  .mid-text {
+    font-size: 1.2rem
+  }
+
+  .jogadas {
+    gap: 20px;
+  }
+
+  .jogadas div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .escolhas div {
+    width: 110px;
+    height: 110px;
+  }
+
+  .escolha img {
+    max-width: 100px;
+    cursor: pointer;
+  }
+
+  .escolha img:hover {
+    max-width: 100px;
+    transition: 0.3s;
+  }
+
+  .contadores {
+    font-size: 1rem;
+  }
+
+  .resultado {
+    font-size: 1rem;
+  }
+}
